@@ -8,6 +8,7 @@
                    <p><strong>{{quotes.author}}</strong></p>
              </div>
         </div>
+                     <a class="button is-primary is-medium fade-in" value="Refresh Page" onClick="window.location.reload()">New Quote</a>
      </section>
 </template>
 
@@ -47,13 +48,18 @@ export default {
           justify-content: center;
      }
 
+     .button {
+          align-self: center;
+          width: 50%;
+     }
+
 //TRANSITIONS//
 .fade-in {
 	opacity: 1;
 	animation-name: fadeInOpacity;
 	animation-iteration-count: 1;
 	animation-timing-function: ease-in;
-	animation-duration: 2s;
+	animation-duration: 1.5s;
 }
 
 @keyframes fadeInOpacity {
