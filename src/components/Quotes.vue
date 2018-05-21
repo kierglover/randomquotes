@@ -32,9 +32,13 @@ export default {
 <style lang="sass" scoped>
 
 @mixin gradient-bg {
-     background: #24C6DC;
-     background: -webkit-linear-gradient(to right, #514A9D, #24C6DC);
-     background: linear-gradient(to right, #514A9D, #24C6DC);
+          width: 100wh;
+          height: 100vh;
+          background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+     	background-size: 400% 400%;
+     	-webkit-animation: Gradient 15s ease infinite;
+     	-moz-animation: Gradient 15s ease infinite;
+     	animation: Gradient 15s ease infinite;
 }
      .hero {
           height: 100vh;
@@ -70,4 +74,40 @@ export default {
 		opacity: 1;
 	}
 }
+
+     @-webkit-keyframes Gradient {
+     	0% {
+     		background-position: 0% 50%
+     	}
+     	50% {
+     		background-position: 100% 50%
+     	}
+     	100% {
+     		background-position: 0% 50%
+     	}
+     }
+
+     @-moz-keyframes Gradient {
+     	0% {
+     		background-position: 0% 50%
+     	}
+     	50% {
+     		background-position: 100% 50%
+     	}
+     	100% {
+     		background-position: 0% 50%
+     	}
+     }
+
+     @keyframes Gradient {
+     	0% {
+     		background-position: 0% 50%
+     	}
+     	50% {
+     		background-position: 100% 50%
+     	}
+     	100% {
+     		background-position: 0% 50%
+     	}
+     }
 </style>
